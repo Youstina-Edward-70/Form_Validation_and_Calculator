@@ -1,0 +1,313 @@
+:root {
+	--main-color: #2b2d30;
+	--second: #eee;
+	--third: #ccc;
+	--forth: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #2b2d30;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+    padding: 5rem 2rem;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 2px 5px 20px 0px rgba(0,0,0,0.75);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+
+.header {
+    text-align: center;
+	border-bottom: 1px solid #ccc;
+	background-color: #eee;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin: 0;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.dateOfBirth label {
+    display: inline-block;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.date {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+}
+
+.date .form-control {
+    flex-grow: 1;
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+
+.date .form-control select {
+	flex-grow: 1;
+}
+
+.date .form-control small,
+.form-control .selected-option small {
+	bottom: -18px;
+}
+
+.date i {
+    right: 18px !important;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #eee;
+	border-radius: 5px;
+	display: block;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+    transition: all 0.3s ease-in;
+}
+
+.form-control select {
+	border: 2px solid #eee;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 10px;
+    transition: all 0.3s ease-in;
+}
+
+input[type="tel"] {
+    border-radius: 0 5px 5px 0;
+}
+
+.select-box input:focus {
+    border: .1rem solid var(--main-color);
+}
+
+.selected-option {
+    background-color: var(--second);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected-option div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    width: 10rem;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selected-option div i {
+    visibility: visible;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transform: translateY(0);
+}
+
+.selected-option div::after{
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    transition: .2s;
+}
+
+.selected-option div.active::after{
+    transform: translateY(-50%) rotate(225deg);
+}
+
+.select-box .options {
+    position: absolute;
+    top: 72px;
+    width: 100%;
+    background-color: var(--forth);
+    border-radius: 5px;
+    border: 2px solid var(--third);
+    display: none;
+    z-index: 100;
+}
+
+.select-box .options.active {
+    display: block;
+}
+
+.select-box .options::before {
+    content: "";
+    position: absolute;
+    left: 1rem;
+    top: -1.2rem;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: var(--main-color);
+}
+
+input.search-box {
+    width: calc(100% + 4px);
+    position: relative;
+    top: -2px;
+    left: -2px;
+    background-color: var(--main-color);
+    color: var(--forth);
+    border-radius: 5px 5px 0 0;
+    border: 2px solid var(--main-color) !important;
+    padding: 20px 10px;
+}
+
+.select-box ol {
+    list-style: none;
+    max-height: 16rem;
+    overflow: auto;
+}
+
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.select-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 3rem;
+    background-color: var(--third);
+    border-radius: .4rem;
+}
+
+.select-box ol li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select-box ol li.hide {
+    display: none;
+}
+
+.select-box ol li div {
+    display: flex;
+    align-items: center;
+}
+
+.select-box ol li:not(:last-child) {
+    border-bottom: .1rem solid var(--second);
+}
+
+.select-box ol li:hover {
+    background-color: var(--second);
+}
+
+.select-box ol li .country-name {
+    margin-left: .4rem;
+}
+
+.form-control input:focus,
+.form-control select:focus {
+	outline: 0;
+	border-color: #333;
+}
+
+.form-control.success input,
+.form-control.success select {
+	border-color: #2ecc71;
+}
+
+.form-control.error input,
+.form-control.error select {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	bottom: 50%;
+    transform: translateY(50%);
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	visibility: visible;
+	color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	visibility: visible;
+	color: #e74c3c;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
+.form button {
+    background-color: #2b2d30;
+	border: 2px solid #2b2d30;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.form button:hover {
+    background-color: #fff;
+    color: #2b2d30;
+}

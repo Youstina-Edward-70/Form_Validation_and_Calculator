@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="shortcut icon" href="img/check-mark.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2b2d30;
+            padding: 3rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 5px 20px 0px rgba(0,0,0,0.75);
+            padding: 4rem 3rem;
+        }
+        
+        a {
+            text-decoration: none;
+            box-shadow: 2px 5px 20px 0px rgba(0,0,0,0.75);
+            background-color: #2b2d30;
+            color: white;
+            font-size: 20px;
+            margin-top: 25px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in;
+        }
+
+        a:hover {
+            background-color: white;
+            color: #2b2d30;
+            box-shadow: 0px 0px 0px transparent;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 2px solid #2b2d30;
+            border-radius: 25px;
+            transform: rotate(0) scale(0);
+            transition: all 0.5s;
+        }
+
+        a:hover::before {
+            transform: rotate(180deg);
+            scale: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkMark" id="checkMark">
+            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+            <dotlottie-wc src="https://lottie.host/73f6d5fd-e9bf-4eaf-a9b1-0047f07eba9d/vnuF3z3zaz.lottie" style="width: 300px;height: 300px" speed="1" autoplay loop></dotlottie-wc>
+        </div>
+        <h1 class="animate__animated animate__fadeInUp">Successfully Login</h1>
+        <a href="../Calculator/index.html"><i class="fa-solid fa-calculator"></i> Calculator</a>
+    </div>
+    <script src="https://lottie.host/embed/73f6d5fd-e9bf-4eaf-a9b1-0047f07eba9d/vnuF3z3zaz.lottie"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="shortcut icon" href="img/exam.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+</head>
+<body>
+        <!--
+            name
+            email
+            phone
+            month
+            days
+            year
+            password
+            confirm password
+        -->
+    <div class="container">
+        <div class="header">
+            <h2>Form Validation</h2>
+        </div>
+        <form id="form" class="form" novalidate>
+            <!-- name -->
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" placeholder="Your Name" id="name" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <!-- email -->
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="example@email.com" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <!-- phone -->
+            <div class="form-control">
+                <label for="tel">Phone</label>
+                <div class="select-box">
+                    <div class="selected-option">
+                        <div>
+                            <i class="fa-solid fa-globe"></i>
+                            <strong id="code">+xx</strong>
+                        </div>
+                        <input type="tel" name="tel" id="tel" placeholder="Phone Number">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="options">
+                        <input type="text" class="search-box" placeholder="Search Country Name">
+                        <ol>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- date -->
+            <div class="dateOfBirth">
+                <label for="day">Date of Birth</label>
+                <div class="date">
+                    <div class="form-control">
+                        <select name="day" id="day">
+                            <option value="0">Day</option>
+                        </select>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <select name="month" id="month">
+                            <option value="0">Month</option>
+                        </select>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <select name="year" id="year">
+                            <option value="0">Year</option>
+                        </select>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- password -->
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" id="password"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <!-- confirm -->
+            <div class="form-control">
+                <label for="confirmP">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" id="confirmP"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
