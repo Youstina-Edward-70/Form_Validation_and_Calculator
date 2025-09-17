@@ -132,7 +132,7 @@ let btns = [
         id: "percent",
         class: "operator",
         symbol: "%",
-        formula: "/100",
+        formula: "%",
     },
     {
         id: "equal",
